@@ -3,8 +3,34 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
+<div class="container-fluid">
+  <h1 class="pt-5 text-center">Bonjour, veuillez-vous connecter !</h1>
+   <div class="row justified-content-center">
 
-   <h1>Bonjour, veuillez-vous connecter✅</h1>
+      <div class="col-lg-6">
+         <img src="{{ asset('build/images/undraw_online_connection.png') }}" style="height:700px;">
+      </div>
+      <div class="col-lg-6">
+          <div class="card jumbotron cardForm">
+              <div class="card-body">
+                  <h3 class="text-center default-text py-5"><i class="fa fa-lock pr-2"></i> Login</h3>
+                  <div class="md-form">
+                      <i class="fa fa-envelope prefix grey-text"></i>
+                      <input type="text" id="defaultForm-email" class="form-control">
+                      <label for="defaultForm-email">Email</label>
+                  </div>
+                  <div class="md-form">
+                      <i class="fa fa-lock prefix grey-text"></i>
+                      <input type="password" id="defaultForm-pass" class="form-control">
+                      <label for="defaultForm-pass">Mot de passe</label>
+                  </div>
+                  <div class="text-center">
+                      <button class="btn btn-default">Envoyer</button>
+                  </div>
+              </div>
+          </div>
 
-
+      </div>
+   </div>
+</div>
 {% endblock %}
