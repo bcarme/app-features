@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="pt-5 text-center">Bonjour, veuillez-vous connecter !</h1>
+        <div class="row justified-content-center">
+            <div class="col-lg-6">
+                <img src="{{ asset('build/images/undraw_online_connection.png') }}" style="height:700px;">
+            </div>
+            <div class="col-lg-6">
+                <form method="post">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% endif %}
+                <div class="card jumbotron cardForm">
+                    <div class="card-body">
+                        <h3 class="text-center default-text py-5"><i class="fa fa-lock pr-2"></i> Login</h3>
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix grey-text"></i>
+                            <input type="email" value="{{ last_username }}" name="email" id="defaultForm-email" class="form-control" required autofocus>
+                            <label for="defaultForm-email">Email</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix grey-text"></i>
+                            <input type="password" name="password" id="defaultForm-pass" class="form-control" required>
+                            <label for="defaultForm-pass">Mot de passe</label>
+                        </div>
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}">
+                        <div class="text-center">
+                            <button class="btn btn-default" type="submit">Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
