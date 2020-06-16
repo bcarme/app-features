@@ -1,0 +1,58 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color:#2BBBAD;
+    border-right: 1px solid #d0d0d0;
+    padding: 15px 10px;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+  nav ul li {
+    padding: 12px 0;
+    cursor: pointer;
+    color: #222;
+    transition: color .1s;
+  }
+  nav ul li:hover {
+    color: #38e;
+  }
+  
+  .tooltip-container {
+    position: relative;
+  }
+  .tooltip-container:hover .tooltip {
+    display: inline-block;
+    top: 10px;
+    left: 64px;
+  }
+  
+  .tooltip {
+    display: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #111;
+    color: #fafafa;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 2;
+    /*text-transform: uppercase;*/
+  }
+  .tooltip:before {
+    content: "";
+    background-color: #111;
+    transform: rotate(45deg);
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    left: -0.25em;
+    top: 0.65em;
+    z-index: 1;
+  }
+  
+  
