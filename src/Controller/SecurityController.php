@@ -21,7 +21,7 @@ class SecurityController extends AbstractController
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
          if ($this->getUser()) {
-            return $this->redirectToRoute('target_path');
+            return $this->redirectToRoute('admin');
          }
 
         // get the login error if there is one
@@ -41,7 +41,7 @@ class SecurityController extends AbstractController
     }
 
     /**
-     * @Route("/register", name="app_register")
+     * @Route("/inscription", name="app_register")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator): Response
     {

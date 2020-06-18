@@ -37,6 +37,133 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $firstname;
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $phone;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $address;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $city;
+
+    /**
+     * @return mixed
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * @param mixed $lastname
+     */
+    public function setLastname($lastname): void
+    {
+        $this->lastname = $lastname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    /**
+     * @param mixed $firstname
+     */
+    public function setFirstname($firstname): void
+    {
+        $this->firstname = $firstname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param mixed $phone
+     */
+    public function setPhone($phone): void
+    {
+        $this->phone = $phone;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address): void
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param mixed $city
+     */
+    public function setCity($city): void
+    {
+        $this->city = $city;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getZipcode()
+    {
+        return $this->zipcode;
+    }
+
+    /**
+     * @param mixed $zipcode
+     */
+    public function setZipcode($zipcode): void
+    {
+        $this->zipcode = $zipcode;
+    }
+
+    /**
+     * @ORM\Column(type="integer", length=255, nullable=true)
+     */
+    private $zipcode;
+
     public function getId(): ?int
     {
         return $this->id;

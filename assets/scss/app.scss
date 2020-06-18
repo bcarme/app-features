@@ -1,63 +1,80 @@
 @import "~bootstrap/scss/bootstrap";
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+@import"_vars.scss";
 @import"nav.scss";
+@import"logform.scss";
+@import url('https://fonts.googleapis.com/css2?family=Jost');
 
-
-.cardForm{
-  width:750px;
-  margin-top:100px;
-}
-.md-form{
-  width:650px;
+.jbbg{
+  background-color: whitesmoke;
 }
 
-.btn-default{
-  background-color: #2BBBAD;
-  margin-bottom: 30px;
+.shapebg{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
-.default-text {
-  color: #2BBBAD;
+
+h1{
+  font-family: 'Jost', sans-serif;
+  font-size:30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2{
+  font-family: 'Jost', sans-serif;
+  font-size:28px;
   font-weight: bolder;
 }
 
-.form-white .md-form label {
-  color: #fff;
+p{
+  font-size:18px;
 }
-.form-white input[type=text]:focus:not([readonly]) {
-  border-bottom: 2px solid #fff;
-  -webkit-box-shadow: 0 1px 0 0 #fff;
-  box-shadow: 0 2px 0 0 #fff;
+
+.homeMenu{
+  display:inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size:18px;
+  color:darkgrey;
+  padding: 0 30px;
 }
-.form-white input[type=text]:focus:not([readonly]) + label {
-  color: #fff;
+
+.imageHome{
+  //position:absolute;
+  z-index:10;
 }
-.form-white input[type=password]:focus:not([readonly]) {
-  border-bottom: 1px solid #fff;
-  -webkit-box-shadow: 0 1px 0 0 #fff;
-  box-shadow: 0 1px 0 0 #fff;
+
+.blob{
+  width:53%;
+  position:fixed;
+  top:10%;
+  left:60%;
+  Z-index:0;
+  opacity:0.5;
 }
-.form-white input[type=password]:focus:not([readonly]) + label {
-  color: #fff;
+
+.dot{
+  position:fixed;
+  width:110px;
+  opacity: 0.4;
+  top:24%;
+  left:30%;
+  Z-index:0;
 }
-.form-white input[type=password], .form-white input[type=text] {
-  border-bottom: 1px solid #fff;
+
+.wavy{
+  position:fixed;
+  opacity: 0.1;
+  top:60%;
+  left:11%;
+  Z-index:-1;
+  transform: rotate(4deg);
 }
-.form-white .form-control:focus {
-  color: #fff;
-}
-.form-white .form-control {
-  color: #fff;
-}
-.form-white textarea.md-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #fff;
-  box-shadow: 0 1px 0 0 #fff;
-  color: #fff;
-}
-.form-white textarea.md-textarea  {
-  border-bottom: 1px solid #fff;
-  color: #fff;
-}
-.form-white textarea.md-textarea:focus:not([readonly])+label {
-  color: #fff;
+
+.presentation{
+  padding-left:10em;
 }

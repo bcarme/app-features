@@ -4,36 +4,45 @@
 
 {% block body %}
 <div class="container-fluid">
-    <h1 class="pt-5 text-center">Bonjour, veuillez-vous inscrire !</h1>
-    <div class="row justified-content-center">
-        <div class="col-lg-6">
-            <img src="{{ asset('build/images/undraw_online_connection.png') }}" style="height:700px;">
+    <h1 class="p-5 text-center">Bonjour, veuillez-vous inscrire !</h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-4">
+            <img src="{{ asset('build/images/undraw_fitting_pieces.png') }}" style="height:700px;">
         </div>
-        <div class="col-lg-6">
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
+      <div class="col-lg-7">
+        {% for flashError in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+        {% endfor %}
+          <div class="jumbotron jbbg">
+              <div class="card-body">
+            {{ form_start(registrationForm) }}
+          <div class="row">
+              <div class="col">{{ form_row(registrationForm.firstname) }}</div>
+              <div class="col">{{ form_row(registrationForm.lastname) }}</div>
+          </div>
+          <div class="row">
+              <div class="col"> {{ form_row(registrationForm.address) }}</div>
+          </div>
+          <div class="row">
+              <div class="col">{{ form_row(registrationForm.zipcode) }}</div>
+              <div class="col">{{ form_row(registrationForm.city) }}</div>
+          </div>
+          <div class="row">
+              <div class="col"> {{ form_row(registrationForm.email) }}</div>
+              <div class="col"> {{ form_row(registrationForm.plainPassword) }}</div>
+          </div>
+          <div class="row">
+              <div class="col">   {{ form_row(registrationForm.agreeTerms) }}</div>
+          </div>
 
-            <div class="card jumbotron cardForm">
-                <div class="card-body">
-    {{ form_start(registrationForm) }}
-
-                    <div class="md-form">
-        {{ form_row(registrationForm.email) }}
+                    <div class="text-center">
+                       <button type="submit" class="btn btn-lg btn-default btlight">S'inscrire</button>
                     </div>
-                    <div class="md-form">
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Mot de passe'
-        }) }}
-                    </div>
-
-        {{ form_row(registrationForm.agreeTerms) }}
-
-            <div class="text-center">
-               <button type="submit" class="btn btn-default">S'inscrire</button>
-            </div>
-    {{ form_end(registrationForm) }}
+            {{ form_end(registrationForm) }}
         </div>
             </div>
         </div>
+    </div>
+    </div>
+</div>
 {% endblock %}
