@@ -3,34 +3,39 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-<div class="container-fluid">
-  <h1 class="pt-5 text-center">Bonjour, veuillez-vous connecter !</h1>
-   <div class="row justified-content-center">
 
-      <div class="col-lg-6">
-         <img src="{{ asset('build/images/undraw_online_connection.png') }}" style="height:700px;">
-      </div>
-      <div class="col-lg-6">
-          <div class="card jumbotron cardForm">
-              <div class="card-body">
-                  <h3 class="text-center default-text py-5"><i class="fa fa-lock pr-2"></i> Login</h3>
-                  <div class="md-form">
-                      <i class="fa fa-envelope prefix grey-text"></i>
-                      <input type="text" id="defaultForm-email" class="form-control">
-                      <label for="defaultForm-email">Email</label>
-                  </div>
-                  <div class="md-form">
-                      <i class="fa fa-lock prefix grey-text"></i>
-                      <input type="password" id="defaultForm-pass" class="form-control">
-                      <label for="defaultForm-pass">Mot de passe</label>
-                  </div>
-                  <div class="text-center">
-                      <button class="btn btn-default">Envoyer</button>
-                  </div>
-              </div>
-          </div>
-
-      </div>
-   </div>
-</div>
+        <header>
+            <div class="container-fluid">
+                <div class="row mt-3 align-items-center">
+                    <div class="col-8">
+                        <h1 class="pl-4 pt-3 pr-5 pb-3"><i class="fas fa-chess-bishop p-3"></i>Extranet</h1>
+                    </div>
+                    <div class="col-4 align-items-center p-3">
+                        <a class="homeMenu">FEATURES</a>
+                        <a class="homeMenu">FAQ</a>
+                        <a class="homeMenu">CONTACT</a>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center mt-4">
+                    <div class="col-lg-5 align-items-center presentation">
+                        <img src="{{ asset('build/images/dot.png') }}" class="dot">
+                        <h2>Bienvenue sur notre outil de gestion</h2>
+                        <p>Vous devez vous connecter pour utiliser l'extranet. Vous pourrez également consulter votre espace personnel.
+                            pour aider votre organisation à offrir à vos bénévoles une gestion de leur temps, ainsi qu'à établir de meilleures relations
+                           en assurant le suivi des tâches à faire selon les pôles.
+                        </p>
+                    <a href="{{path('app_login')}}" class="btn btn-lg btn-default" type="submit">Se connecter</a>
+                    <a href="{{path('app_register')}}" class="btn btn-lg btn-default btlight" type="submit">S'inscrire</a>
+                        <img src="{{ asset('build/images/wavy.png') }}" class="wavy">
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 justify-content-center align-items-center">
+                        <div class="shapebg">
+                        <img src="{{ asset('build/images/blob.png') }}" class="blob">
+                        </div>
+                        <img src="{{ asset('build/images/illustration-hero.png') }}" class="imageHome">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 {% endblock %}
