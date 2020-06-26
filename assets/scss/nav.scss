@@ -3,23 +3,23 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    background-color:#2BBBAD;
+    background-color:$lively-color;
     border-right: 1px solid #d0d0d0;
     padding: 15px 10px;
   }
   nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 30px;
   }
   nav ul li {
     padding: 12px 0;
     cursor: pointer;
-    color: #222;
+    color: white;
     transition: color .1s;
   }
   nav ul li:hover {
-    color: #38e;
+    color: black;
   }
   
   .tooltip-container {

@@ -4,6 +4,7 @@
 @import"_vars.scss";
 @import"nav.scss";
 @import"logform.scss";
+@import"calendar.scss";
 @import url('https://fonts.googleapis.com/css2?family=Jost');
 
 .jbbg{
@@ -23,6 +24,7 @@ h1{
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin-top:15px;
 }
 
 h2{

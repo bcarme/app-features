@@ -1,0 +1,32 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Planning{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <div class="d-flex mt-3">
+    <a href="/planning{{ previous }}" class="btn btn-default mt-3 pt-1 font-weight-bold"><i class="fas fa-chevron-left"></i></a>
+    <h1>{{ monthCalendar }}</h1>
+        <a href="/planning{{ next }}"
+           class="btn btn-default mt-3 pt-1 font-weight-bold"><i class="fas fa-chevron-right"></i></a>
+    </div>
+    <table>
+        {% for weekday in weekdays %}
+        <th class="th">{{ weekday }}</th>
+        {% endfor %}
+        <tbody>
+        {% for row in dayDates|batch(7, 'No item') %}
+            <tr>
+                {% for daydate in row %}
+                    {% if daydate == "now"|date('d')%}
+                        <td class="today">{{ daydate }}</td>
+                    {% else %}
+                        <td class="font-weight-bold">{{ daydate }}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block layout %}
+    <div class="row container-fluid">
+        <header class="col-lg-1 p-0">
+            {% block header %}{% include '_nav.html.twig' %}{% endblock %}
+        </header>
+        <main class="col-lg-11 no-gutters">
+            {% include '_flash_message.html.twig' %}
+            {% block body %}{% endblock %}
+        </main>
+    </div>
+{% endblock %}
