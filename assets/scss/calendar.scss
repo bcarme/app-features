@@ -1,0 +1,35 @@
+table {
+  margin-top: 10px;
+  width: 100%;
+  height: calc(100vh - 120px);
+}
+
+  td {
+    border: 1px solid grey;
+    padding: 10px;
+    vertical-align: top;
+    width: 14.28%;
+    height: 15%;
+    font-size: 1.2em !important;
+  }
+
+.th {
+    font-size: 1.3em;
+    height:30px !important;
+  }
+
+.notmonth{
+  color:grey;
+  font-weight: normal;
+}
+
+.today{
+  background-color:whitesmoke;
+  font-weight: bold;
+}
+
+.hourCol{
+  width: 5% !important;
+  height:14%;
+  background-color:whitesmoke;
+}

@@ -1,0 +1,8 @@
+{% extends "base.html.twig" %}
+
+{% block layout %}
+    <main>
+        {% include '_flash_message.html.twig' %}
+        {% block body %}{% endblock %}
+    </main>
+{% endblock %}
